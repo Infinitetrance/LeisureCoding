@@ -1,0 +1,22 @@
+Step 1) Run Java program as usual (it does not matter if it fails), and switch to the debug view.
+
+Step 2) Right click on the process, and open the property window by selecting "Properties".
+
+Step 3) Select and copy the command-line parameter used to launch the program.
+
+Step 4) Hit the arrow-button next to "External Tools" (The play icon with a small red toolbox), and hit "External Tools Configuration"
+
+Step 5) Create a new configuration, with the following data:
+		
+Location: The path to the cmd.exe of your Windows
+		  For Example: C:\WINDOWS\system32\cmd.exe
+		
+Working Directory: e.g. D:\LeisureCoding\bin
+		
+Arguments: "/c start C:\Windows\System32\cmd.exe /k " followed by the previously copied command.
+For Example: /c start C:\Windows\System32\cmd.exe /k "C:\Program Files\Java\jre1.8.0_92\bin\java.exe" -Dfile.encoding=UTF-8 -classpath D:\LeisureCoding\bin StickMan
+	
+Please note, that you need to wrap paths containing whitespace with quotes (“).
+	
+The above command will start your application in a new, detached console window, which will stay open until you manually close it.
+Now you can launch your newly created configuration and enjoy your application from inside Eclipse.
