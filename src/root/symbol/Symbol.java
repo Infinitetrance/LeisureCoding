@@ -1,4 +1,4 @@
-package root.Symbol;
+package root.symbol;
 
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;

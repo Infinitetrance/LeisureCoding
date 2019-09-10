@@ -9,9 +9,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.function.Consumer;
 
 /**
- * Set of interesting java questions 
+ * Set of interesting java questions
  *
  */
 public class Riddles {
@@ -60,11 +61,11 @@ public class Riddles {
 
 	/**
 	 * U+202e is a unicode control character(also called RTL character ) that
-	 * changes all subsequent text to right-to-left Ann‮txt.exe Symbol‮txt.jar
+	 * changes all subsequent text to right-to-left Annâ€®txt.exe Symbolâ€®txt.jar
 	 * txt.exe
 	 */
 	public static void RTLCharTrick() {
-		System.out.println("‮ABC");
+		System.out.println("â€®ABC");
 	}
 
 	public static void shorHandOperatorTrick() {
@@ -312,7 +313,7 @@ public class Riddles {
 
 	static void ternaryOpTypePromo() {
 		// output is 1.0 because The conditional operator will implement numeric
-		// type promotion, if “needed”,
+		// type promotion, if â€œneededâ€�,
 		System.out.println(true ? 1L : 2.5D);
 
 		// same here
@@ -398,6 +399,27 @@ public class Riddles {
 		}
 	}
 
+	static void spaceDoNotMatter() {
+		// zero space between array operator and identifier is valid java syntax
+		int[] a;
+
+		// this too valid
+		int[] b;
+
+		// this too valid
+		int c[];
+
+		// valid
+		Consumer<String[]> con = (String... x) ->
+		{
+		};
+		// this too valid
+		Consumer<String[]> con1 = (String... x) ->
+		{
+		};
+
+	}
+
 	// Getting name of enclosing class in static scope without hard coding class
 	// name like EnclosingClassName.class.getname()
 	static String enclosingClassName = MethodHandles.lookup().lookupClass().getName();
@@ -411,15 +433,6 @@ public class Riddles {
 	/**
 	 * It is a compile time error to import a type from the unnamed(default)
 	 * package.
-	 * 
-	 * During method override throws CheckedException could be removed but could not
-	 * be added, why ? Because purpose of checked exception is to force exception
-	 * handling at compile time and if we add checked exception throws at overridden
-	 * method than in case of polymorphism i.e. Parent p = new Child(); p.name();
-	 * Child.name have throws IOException now p.name (); compiler could not force
-	 * exception handling at compile time because Parent.name do not throw exception
-	 * and JVM would not know that p hold actual object of Child (that throws a
-	 * checked exception) until runtime.
 	 */
 
 	public static void main(String... a) throws Exception {
