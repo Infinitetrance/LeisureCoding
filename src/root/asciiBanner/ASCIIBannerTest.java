@@ -10,8 +10,8 @@ public class ASCIIBannerTest {
 		ASCIIBanner.print(" Java ");
 		ASCIIBanner.print('.', ' ', " Java ");
 		ASCIIBanner.print('X', ' ', " Java ");
-		ASCIIBanner.print(' ', '▒', " Java ");
 		ASCIIBanner.print(' ', '█', " Java ");
+		ASCIIBanner.print(' ', '▄', " Java ");
 		ASCIIBanner.print(1, 4, "JAVA", " ", " JAVA ");
 
 		Path binaryImage = Paths.get(ASCIIBannerTest.class.getResource("bio79x39").toURI());
