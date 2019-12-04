@@ -1,5 +1,4 @@
 package root.riddles;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -15,7 +14,7 @@ public class AssignmentAndOverloads {
 		 */
 
 		/**
-		 * if the expression is a constant expression (ง15.28) of type byte, short,
+		 * if the expression is a constant expression (ยง15.28) of type byte, short,
 		 * char, or int:
 		 * 
 		 * A narrowing primitive conversion may be used if the variable is of type byte,
